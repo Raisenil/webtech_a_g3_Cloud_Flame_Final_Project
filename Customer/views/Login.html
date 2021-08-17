@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="background-color:	#B0C4DE;">
+<head>
+	<title></title>
+</head>
+<body >
+	<form method="POST" action="../logics/loginCheck.php" id="form">
+		<table align= "center" border="0" width=300px height=400px style="background-color:white;">
+			<tr>
+				<td height=50px style="background-color:white;"  align="center">
+					<h1 align=center style="color:#FF8C00;">Login Form</h1>
+					<img src="picture/login_img.jpg" width=250px height=120px>
+				</td>
+			</tr>
+			<tr>
+				<td align=center>
+						
+						<input type="text" name="userName" id="userName" value="" placeholder="Username" size="30" ><br><br>
+						<input type="password" name="password" id="password" value="" placeholder="Password" size="30"><br><br>
+					<input type="Submit" name="submit" value="   Login   " width="30%" style="background-color:orange;" onclick="validation()"><br>
+						Don't have account? <a href="Registration.html">Sign up</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		function validation()
+		{
+			//alert(document.getElementById('userName').value);
+			tem=0;
+			if(document.getElementById('userName').value=="" || document.getElementById('password').value=="")
+			{
+				alert("Username/Password is empty!");
+				document.getElementById('form').action="";//tem=1;
+			}
+		}
+	</script>
+</body>
+</html>

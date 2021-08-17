@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html style="background-color:#B0C4DE;">
+	<head></head>
+	<body align="center">
+		<!--<h1 align="center"><i>test</h1> -->
+		<form method="POST" action="../logics/registrationCheck.php" id="form">
+			<center>
+				<table border="0" width=350px height=300px style="background-color:#F5F5F5;">
+				
+					<tr>
+					<td rowspan="2">
+						<img src="picture/i1.jpg" width=200px height=360px>
+						</td>
+					<td ><h2 align=center style="color:darkorange">Registartion Form</h2></tr></td>
+					<tr>
+						<td>
+						<center>
+						<br><br>
+						<input type="text" name="name" id="name" value="" placeholder="Full Name" size="30" ><br><br>
+						
+						<input type="Email" name="email"id="email" value="" placeholder="Email" size="30"  ><br><br>
+						
+						<input type="text" name="userName" id="userName" value="" placeholder="Username" size="30" ><br><br>
+						
+						<input type="password" name="password" id="password" value="" placeholder="Password" size="30"><br><br>
+						
+						<input type="password" name="comPassword" id="comPassword" value="" placeholder="Confirm Password" size="30"  ><br><br>
+						<select name="type">
+							<option>customer</option>
+							<!--option>admin</option-->
+						</select><br><br>
+												
+						<input type="Submit" name="submit" value="Register" width="30%" style="background-color:limegreen;" onclick="validation()">
+						or <a href="Login.html">I have account?</a>
+						
+						</center>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</form>
+		<script>
+		function validation()
+		{
+			//alert(document.getElementById('userName').value);
+			tem=0;
+			if(document.getElementById('name').value=="" ||document.getElementById('email').value=="" ||document.getElementById('userName').value=="" ||document.getElementById('comPassword').value=="" || document.getElementById('password').value=="")
+			{
+				alert("Some information is missing!");
+				document.getElementById('form').action="";tem=1;
+			}
+		}
+	</script>
+	</body>
+</html>
